@@ -8,9 +8,30 @@
 
 int printf_bin(va_list arg)
 {
-	unsigned int i, n;
+	int i, cont, flag, a, b;
+	unsigned int num, p;
 
-	n = va_arg(arg, unsigned int);
-	i = _puts(convert(n, 2));
-	return (i);
+	flag = 0;
+	cont = 0;
+	a = 1;
+	num = va_arg(arg, unsigned int);
+
+	for (i = 0; i < 32; i++)
+	{
+		p = ((a << (31 - i)) & num);
+		if (p >> (31 - i))
+			flag = 1;
+		if (flag)
+		{
+			b = p >> (31 - i);
+			_putchar(b + 48);
+			cont++;
+		}
+	}
+	if (cont == 0)
+	{
+		cont++;
+		_putchar('0');
+	}
+	return (cont);
 }
