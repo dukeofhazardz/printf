@@ -32,7 +32,7 @@ int printf_char(va_list arg);
 int printf_per37(void);
 int printf_int(va_list arg);
 int printf_deci(va_list arg);
-int printf_strev(void);
+int printf_strev(va_list arg);
 int printf_rot13(va_list arg);
 int printf_bin(va_list arg);
 int printf_unsigned(va_list arg);
