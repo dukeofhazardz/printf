@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * printf_exclusive_string - print exclusuives string.
+ * printf_exclusive_str - print exclusuives string.
  * @arg: arguement.
  * Return: the length of the string.
  */
@@ -27,7 +27,7 @@ int printf_exclusive_str(va_list arg)
 				_putchar('0');
 				len++;
 			}
-			len = len + printf_HEX(cast);
+			len = len + printf_HEX_convert(cast);
 		}
 		else
 		{

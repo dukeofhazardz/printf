@@ -21,8 +21,8 @@ typedef struct format
 } convert_match;
 
 int _printf(const char *format, ...);
-char *convert(unsigned int n, int base);
-char *convert_HEX(unsigned int n, int base);
+int printf_hex_convert(unsigned long int num);
+int printf_HEX_convert(unsigned int num);
 int _putchar(char c);
 int _puts(char *s);
 int _strlen(char *s);
