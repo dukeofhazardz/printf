@@ -1,16 +1,39 @@
 #include "main.h"
 
 /**
- * printf_HEX - A function that coverts to hexdecimal
+ * printf_HEX - A function that coverts to Hexadecimal
  * @arg: a character arguement
- * Return: Integer
+ * Return: Integer.
  */
 
 int printf_HEX(va_list arg)
 {
-	unsigned int i, n;
+	int i, counter;
+	int *array;
+	unsigned int temp, num;
 
-	n = va_arg(arg, unsigned int);
-	i = _puts(convert_HEX(n, 16));
-	return (i);
+	counter = 0;
+	num = va_arg(arg, unsigned int);
+	temp = num;
+
+	while (num / 16 != 0)
+	{
+		num /= 16;
+		counter++;
+	}
+	counter++;
+	array = malloc(counter * sizeof(int));
+	for (i = 0; i < counter; i++)
+	{
+		array[i] = temp % 16;
+		temp /= 16;
+	}
+	for (i = counter - 1; i >= 0; i--)
+	{
+		if (array[i] > 9)
+			array[i] = array[i] + 7;
+		_putchar(array[i] + '0');
+	}
+	free(array);
+	return (counter);
 }
