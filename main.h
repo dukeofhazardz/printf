@@ -22,6 +22,7 @@ typedef struct format
 
 int _printf(const char *format, ...);
 char *convert(unsigned int n, int base);
+char *convert_HEX(unsigned int n, int base);
 int _putchar(char c);
 int _puts(char *s);
 int _strlen(char *s);
@@ -32,7 +33,7 @@ int printf_per37(void);
 int printf_int(va_list arg);
 int printf_deci(va_list arg);
 int printf_strev(void);
-int printf_ro13(va_list arg);
+int printf_rot13(va_list arg);
 int printf_bin(va_list arg);
 int printf_unsigned(va_list arg);
 int printf_octal(va_list arg);

@@ -8,7 +8,7 @@
 * Return: returns a pointer
 */
 
-char *convert_HEX(unisigned int n, int base)
+char *convert_HEX(unsigned int n, int base)
 {
 	static const char Representation[] = "0123456789ABCDEF";
 	static char buffer[50];
@@ -23,3 +23,4 @@ char *convert_HEX(unisigned int n, int base)
 	} while (n != 0);
 
 	return (ptr);
+}
