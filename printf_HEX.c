@@ -1,5 +1,11 @@
 #include "main.h"
 
+/**
+ * printf_HEX - A function that coverts to hexdecimal
+ * @arg: a character arguement
+ * Return: Integer
+ */
+
 int printf_HEX(va_list arg)
 {
 	unsigned int i, n;

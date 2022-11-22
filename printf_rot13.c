@@ -1,5 +1,11 @@
 #include "main.h"
 
+/**
+ * printf_rot13 - Print a string in rot13
+ * @arg: a character arguement
+ * Return: integer.
+ */
+
 int printf_rot13(va_list arg)
 {
 	int i, j, k, counter = 0;

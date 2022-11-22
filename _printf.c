@@ -1,5 +1,11 @@
 #include "main.h"
 
+/**
+ * _printf - A function that prints formated string.
+ * @format: is the format specifier.
+ * Return: an integer.
+ */
+
 int _printf(const char *format, ...)
 {
 	convert_match m[] = {
@@ -8,8 +14,10 @@ int _printf(const char *format, ...)
 		{"%d", printf_deci}, {"%r", printf_strev},
 		{"%R", printf_rot13}, {"%b", printf_bin},
 		{"%u", printf_unsigned}, {"%o", printf_octal},
-		{"%x", printf_hex}, {"%X", printf_HEX}/*,
-		{"%S", printf_exclusive_str}, {"%p", printf_address}*/
+		{"%x", printf_hex}, {"%X", printf_HEX}
+		/*
+		 * {"%S", printf_exclusive_str}, {"%p", printf_address}
+		*/
 	};
 	va_list args;
 	int i = 0, j, len = 0;

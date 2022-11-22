@@ -1,5 +1,11 @@
 #include "main.h"
 
+/**
+ * printf_octal - A function that converts to an octal
+ * @arg: a character arguement
+ * Return: Integer
+ */
+
 int printf_octal(va_list arg)
 {
 	unsigned int i, n;

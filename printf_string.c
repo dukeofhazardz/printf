@@ -1,5 +1,11 @@
 #include "main.h"
 
+/**
+ * printf_string - A function that prints a string
+ * @arg: a character arguement
+ * Return: integer
+ */
+
 int printf_string(va_list arg)
 {
 	char *s;
